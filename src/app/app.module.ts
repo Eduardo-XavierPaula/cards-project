@@ -10,6 +10,11 @@ import { ClientInfosCardComponent } from './components/client-infos-card/client-
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { CardLineComponent } from './components/card-line/card-line.component';
 import { CardTitleComponent } from './components/card-title/card-title.component';
+import { CardComponent } from './components/card/card.component';
+import { CardHeaderDirective } from './components/card/directives/base/card-header.directive';
+import { CardContentDirective } from './components/card/directives/base/card-content.directive';
+import { CardTitleTextDirective } from './components/card/directives/texts/card-title-text.directive';
+import { CardDescriptionTextDirective } from './components/card/directives/texts/card-description-text.directive';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,15 @@ import { CardTitleComponent } from './components/card-title/card-title.component
     ClientInfosCardComponent,
     CardItemComponent,
     CardLineComponent,
-    CardTitleComponent
+    CardTitleComponent,
+    CardComponent,
+    CardHeaderDirective,
+    CardContentDirective,
+    CardTitleTextDirective,
+    CardDescriptionTextDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
